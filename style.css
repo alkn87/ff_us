@@ -1,0 +1,416 @@
+/*!
+Theme Name: ff_us
+Theme URI: http://underscores.me/
+Author: Alexander Knapp
+Author URI: http://aknapp.at/blog
+Description: Theme for FF Pressbaum
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: ff_us
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+ff_us is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+@import url('bootstrap/css/bootstrap.css');
+@import url('bootstrap/css/bootstrap-responsive.css');
+
+body {
+     padding-top: 60px;
+     padding-bottom: 40px;
+}
+
+
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Bold.ttf);
+	font-weight: bold;
+}
+
+@font-face {
+    font-family: Droid;
+    src: url(fonts/DroidSerif-Regular.ttf);
+}
+
+@font-face {
+    font-family: Droid;
+    src: url(fonts/DroidSerif-Bold.ttf);
+	font-weight: bold;
+}
+
+@font-face {
+    font-family: Droid;
+    src: url(fonts/DroidSerif-Italic.ttf);
+	font-style: italic;
+}
+
+@font-face {
+    font-family: Droid;
+    src: url(fonts/DroidSerif-BoldItalic.ttf);
+	font-style: italic;
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: Rubik;
+    src: url(fonts/Rubik-Regular.ttf);
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: Rubik;
+    src: url(fonts/Rubik-Italic.ttf);
+	font-style: italic;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: Rubik;
+    src: url(fonts/Rubik-Bold.ttf);
+	font-style: normal;
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: Rubik;
+    src: url(fonts/Rubik-BoldItalic.ttf);
+	font-style: italic;
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: Rubik;
+    src: url(fonts/Rubik-Black.ttf);
+	font-style: normal;
+	font-weight: bolder;
+}
+
+@font-face {
+	font-family: Rubik;
+    src: url(fonts/Rubik-BlackItalic.ttf);
+	font-style: italic;
+	font-weight: bolder;
+}
+
+@font-face {
+	font-family: RubikMedium;
+    src: url(fonts/Rubik-Medium.ttf);
+}
+
+@font-face {
+	font-family: RubikMedium;
+    src: url(fonts/Rubik-MediumItalic.ttf);
+	font-style: italic;
+}
+
+@font-face {
+	font-family: Rubik;
+    src: url(fonts/Rubik-Light.ttf);
+	font-style: normal;
+	font-weight: lighter;
+}
+
+@font-face {
+	font-family: Rubik;
+    src: url(fonts/Rubik-LightItalic.ttf);
+	font-style: italic;
+	font-weight: lighter;
+}
+
+/* ----- Font: Roboto ----- */
+
+@font-face {
+	font-family: Roboto;
+	src: url(fonts/RobotoCondensed-Regular.ttf);
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: Roboto;
+	src: url(fonts/RobotoCondensed-LightItalic.ttf);
+	font-weight: lighter;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: Roboto;
+	src: url(fonts/RobotoCondensed-Light.ttf);
+	font-weight: lighter;
+}
+
+@font-face {
+	font-family: Roboto;
+	src: url(fonts/RobotoCondensed-Italic.ttf);
+	font-style: italic;
+}
+
+@font-face {
+	font-family: Roboto;
+	src: url(fonts/RobotoCondensed-BoldItalic.ttf);
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: Roboto;
+	src: url(fonts/RobotoCondensed-Bold.ttf);
+	font-weight: bold;
+}
+
+html, body {
+	font-family: Rubik,Roboto,Montserrat;
+  color: #000000;
+}
+
+
+/* ----- TYPOGRAPHY ----- */
+
+h1 {
+	font-size: 27px;
+  color: #565656;
+}
+
+h2 {
+	font-size: 24px;
+  color: #565656;
+}
+
+h3 {
+	font-size: 21px;
+  color: #565656;
+}
+
+h4 {
+	font-size: 16px;
+  color: #565656;
+}
+
+.comments-title, .comment-reply-title {
+	font-size: 20px;
+}
+
+nav {
+  font-family: Montserrat;
+  color: #D1050C;
+  font-size: 20px;
+}
+
+.blogpost-single p {
+	font-family: Droid;
+	font-size: 16px;
+    -ms-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+	max-width: 100%;
+	text-align: justify;
+}
+
+h1.blog-title {
+	text-align: center;
+	font-size: 40px;
+  color: #121212;
+}
+
+p.blog-title-meta {
+	text-align: center;
+	font-size: 22px;
+  color: #565656;
+}
+
+p.blog-title-meta em {
+	font-style: normal;
+	color: #565656;
+}
+
+a.no-a-style {
+	color: #D1050C;
+  text-decoration: none;
+}
+
+a:hover.no-a-style, a:focus.no-a-style {
+	color: #D1050C;
+  text-decoration: underline;
+}
+
+.widget-title {
+  color: #D1050C;
+  font-family: Montserrat;
+}
+
+/* ----- ELEMENT-STYLES ----- */
+.navbar-default {
+    border-style: none;
+}
+
+.dropdown-menu {
+    border-style: none;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+	/*background-color: #CdCdFF;*/
+	color: black;
+	background-color: white;
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+	color: black;
+	background-color: white;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+	color: black;
+	background-color: white;
+}
+
+.comment-list {
+	list-style: none;
+}
+
+.comment-meta {
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+li.comment {
+	margin-bottom: 15px;
+	margin-top: 10px;
+}
+
+.comment-form label {
+	display: block;
+}
+
+
+.gap-bottom {
+  margin-bottom: 10px;
+}
+
+ol.box-teaser {
+	list-style-type: none;
+	padding: 0;
+	-webkit-padding-start: 0px;
+}
+
+.teaser-text {
+	text-align: center;
+}
+
+span {
+	display: block;
+}
+
+.widget-title {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.widget-title hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-style: dashed;
+}
+
+/* ----- NAVIGATION ----- */
+
+
+@media (min-width:768px) {
+
+	.dropdown:hover .dropdown-menu {
+		display: block;
+		margin-top: 0; // remove the gap so it doesn't close
+	}
+
+}
+
+/* ----- GALLERY ----- */
+
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+  padding: 10px;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+.screen-reader-text {
+  display: none;
+}
