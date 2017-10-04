@@ -266,12 +266,33 @@ a:hover.no-a-style, a:focus.no-a-style {
   text-decoration: underline;
 }
 
+a, a:visited {
+  color:inherit;
+}
+
 .widget-title {
   color: #D1050C;
   font-family: Montserrat;
 }
 
+.entry-header {
+  margin-bottom: 10px;
+}
+
+.entry-title {
+  font-family: Montserrat;
+  font-weight: bold;
+}
+
+.entry-meta {
+  color: #B1B1B1;
+}
+
 /* ----- ELEMENT-STYLES ----- */
+.site {
+  margin: 15px;
+}
+
 .navbar-default {
     border-style: none;
 }
@@ -347,6 +368,18 @@ span {
   margin-top: 5px;
   margin-bottom: 5px;
   border-style: dashed;
+}
+
+.entry-meta span {
+  display: inline-block;
+}
+
+.widget-title {
+  text-align: center;
+}
+
+.widget-title::after {
+  
 }
 
 /* ----- NAVIGATION ----- */

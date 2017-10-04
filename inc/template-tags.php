@@ -12,31 +12,60 @@ if ( ! function_exists( 'ff_us_posted_on' ) ) :
 	 * Prints HTML with meta information for the current post-date/time and author.
 	 */
 	function ff_us_posted_on() {
-		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s, %3$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+			$time_string_update = '<time class="updated" datetime="%1$s">%2$s, %3$s</time>';
 		}
 
 		$time_string = sprintf( $time_string,
 			esc_attr( get_the_date( 'c' ) ),
 			esc_html( get_the_date() ),
+			esc_html( get_the_time() )
+		);
+
+		$time_string_update = sprintf( $time_string_update,
 			esc_attr( get_the_modified_date( 'c' ) ),
-			esc_html( get_the_modified_date() )
+			esc_html( get_the_modified_date() ),
+			esc_html( get_the_time() )
 		);
 
 		$posted_on = sprintf(
-			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'ff_us' ),
+			esc_html_x( 'Veröffentlicht am %s', 'post date', 'freitext' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
+		if ( get_the_date() != get_the_modified_date() ) {
+		$updated_on = sprintf(
+			esc_html_x( ' // Aktualisiert am %s', 'post date', 'freitext' ),
+			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string_update . '</a>'
+		);
+		}
+
 		$byline = sprintf(
-			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'ff_us' ),
+			esc_html_x( ' // %s', 'post author', 'freitext' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
-		echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+		/*
+		$postID = get_the_ID();
+		$commentscount = get_comments_number();
+
+		if ( get_comments_number() ) {
+			$commenttag = sprintf(
+							esc_html_x( ' // Ein Kommentar', ' // %1$s Kommentare', get_comments_number(), 'freitext' ) ,
+							number_format_i18n( get_comments_number() ),
+							'<span>' . get_the_title() . '</span>'
+						);
+		}
+		*/
+
+		/*if ( ! get_comments_number() ) {
+			$commenttag = sprintf(' // Keine Kommentare ');
+		}
+		*/
+
+		echo '<span class="posted-on">' . $posted_on . '</span>' . '<span class="posted-on">' . $updated_on . '</span>' . '<span class="byline"> ' . $byline . '</span>' . '<span class="comment-tag"> ' . $commenttag . '</span>'; // WPCS: XSS OK.
+
 
 	}
 endif;
