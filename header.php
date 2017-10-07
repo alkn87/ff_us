@@ -32,7 +32,8 @@
 <body <?php body_class(); ?>>
 
 	<nav class="navbar navbar-default navbar-fixed-top">
-	  <div class="container-fluid">
+			<div class="container-fluid">
+
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -58,12 +59,14 @@
 	                'walker'            => new wp_bootstrap_navwalker())
 	            );
 	        ?>
-	  </div><!-- /.container-fluid -->
+		</div><!-- /.container-fluid -->
 	</nav>
+
 
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ff_us' ); ?></a>
 
+<!--
 	<header id="masthead" class="site-header">
 
 
@@ -75,7 +78,7 @@
 					'menu_id'        => 'primary-menu',
 				) );
 			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-<div class="row">
-	<div id="content" class="site-content">
+		</nav>
+
+	</header>
+	#site-navigation -->

@@ -11,11 +11,11 @@
 
 ?>
 
-	</div><!-- #content -->
-</div>
+</div><!-- #row -->
 
 <div class="row">
-	<div class="col-xs-12 col-sm-8 col-md-8">
+	<div class="col-xs-12 col-sm-4 col-md-4">
+	<h2>Lorem Ipsum</h2>
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ff_us' ) ); ?>"><?php
@@ -29,7 +29,23 @@
 			?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
-</div>
+	</div>
+
+	<div class="col-xs-12 col-sm-4 col-md-4">
+		<h2>Social Media</h2>
+			<p>Facebook</p>
+			<p>Twitter</p>
+			<p>Facebook</p>
+	</div>
+
+	<div class="col-xs-12 col-sm-4 col-md-4">
+		<h2>Kontakt</h2>
+			<span>Hauptstraße 70</span>
+			<span>3021 Pressbaum</span>
+			<span><span class="glyphicon glyphicon-phone-alt"></span> 02233 52222</span>
+	</div>
+
+
 </div>
 </div><!-- #page -->
 

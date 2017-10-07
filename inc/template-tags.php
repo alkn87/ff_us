@@ -77,12 +77,12 @@ if ( ! function_exists( 'ff_us_entry_footer' ) ) :
 	function ff_us_entry_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
-			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'ff_us' ) );
-			if ( $categories_list ) {
-				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'ff_us' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-			}
+			// /* translators: used between list items, there is a space after the comma */
+			// $categories_list = get_the_category_list( esc_html__( ', ', 'ff_us' ) );
+			// if ( $categories_list ) {
+			// 	/* translators: 1: list of categories. */
+			// 	printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'ff_us' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			// }
 
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'ff_us' ) );
@@ -98,7 +98,7 @@ if ( ! function_exists( 'ff_us_entry_footer' ) ) :
 				sprintf(
 					wp_kses(
 						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'ff_us' ),
+						__( 'Hinterlasse einen Kommentar<span class="screen-reader-text"> on %s</span>', 'ff_us' ),
 						array(
 							'span' => array(
 								'class' => array(),
