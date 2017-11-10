@@ -294,7 +294,7 @@ a, a:visited {
 body {
       background: #c14e4e;
       padding-top: 0px;
-      margin-top: 50px;
+      margin-top: 0px;
 
 }
 
@@ -408,6 +408,27 @@ span {
 .widget-title::after {
 
 }
+
+
+.carousel-inner > .carousel-item {
+  /*height: 70vh;*/
+  height: auto;
+
+}
+
+.carousel-inner > .carousel-item > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 100%;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+
 
 /* ----- NAVIGATION ----- */
 
