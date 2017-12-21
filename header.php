@@ -35,43 +35,6 @@
 
 <body <?php body_class(); ?>>
 
-	<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a class="navbar-brand" href="#">Navbar</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-		</button> -->
-
-
-
-	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <!-- <div class="navbar-header">
-	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-	        <span class="sr-only">Toggle navigation</span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	      </button> -->
-	      <!-- <a class="navbar-brand" href="<?php //echo site_url(); ?>"><?php //bloginfo('name'); ?></a> -->
-	    <!-- </div> -->
-
-
-	    <?php /*
-	            wp_nav_menu( array(
-	                'menu'              => 'primary',
-	                'theme_location'    => 'primary',
-	                'depth'             => 2,
-	                'container'         => 'div',
-	                'container_class'   => 'collapse navbar-collapse',
-									'container_id'      => 'navbarSupportedContent',
-	                'menu_class'        => 'nav-item dropdown',
-	                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-	                'walker'            => new wp_bootstrap_navwalker())
-	            );
-							*/
-	        ?>
-
-	<!-- </nav> -->
-
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light ">
 	   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -94,46 +57,5 @@
 	   ?>
 	 </nav>
 
-	 <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-  </div>
-</nav> -->
-
-
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ff_us' ); ?></a>
-
-<!--
-	<header id="masthead" class="site-header">
-
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ff_us' ); ?></button>
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-			?>
-		</nav>
-
-	</header>
-	#site-navigation -->

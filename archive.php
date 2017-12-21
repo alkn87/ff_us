@@ -37,13 +37,21 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
+			//the_posts_navigation();
 
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
 
-		endif; ?>
+		endif;
+
+		the_posts_pagination( array(
+			'mid_size'  => 2,
+			'prev_text' => __( 'Zurück', 'textdomain' ),
+			'next_text' => __( 'Weiter', 'textdomain' ),
+		));
+
+		?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

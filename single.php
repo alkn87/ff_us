@@ -20,6 +20,20 @@ get_header(); ?>
 
 			the_post_navigation();
 
+			echo get_the_post_navigation(array(
+    				'prev_text' => '<< %title',
+    				'next_text' => '%title >>',
+						));
+
+			?>
+			<span align="left"; display="inline">
+				<?php previous_post_link();?>
+			</span>
+			<span align="right"; display="inline">
+			<?php next_post_link();?>
+			</span>
+			<?php
+
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
 				comments_template();
